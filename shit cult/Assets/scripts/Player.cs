@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float maxspeed;//переменная максимальной скорости
-    private float speed;//переменная текущей скорости
+    public float speed;//переменная текущей скорости
     [SerializeField] private float boost;//переменная ускорения
     [SerializeField] private float slow;//переменная замедления
     private float direction;//направление 
@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpforce;//переменная силы прыжка
     private bool isGrounded;//на земле?
     private bool isFall;//падает?
+    public bool isWork = false;//работает?
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -37,12 +38,11 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        Run();
-        if (isGrounded && Input.GetButtonDown("Jump"))
-            Jump();
-        if (Input.GetKeyDown(KeyCode.W))
+        if (!isWork)
         {
-            Debug.Log("использование");
+            Run();
+            if (isGrounded && Input.GetButtonDown("Jump"))
+                Jump();
             Interact();
         }
     }
@@ -96,16 +96,19 @@ public class Player : MonoBehaviour
         rb.AddForce(transform.up * jumpforce, ForceMode2D.Impulse);
     }
 
-    private void Interact()
+    private void Interact() //использование
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.3f, interactableLayer);
-        if (hits.Length > 0)
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            // Взаимодействуем с первым найденным объектом
-            Interactable interactable = hits[0].GetComponent<Interactable>();
-            if (interactable != null)
+            Debug.Log("использование");
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.3f, interactableLayer);
+            if (hits.Length > 0)
             {
-                interactable.Use();
+                Interactable interactable = hits[0].GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    interactable.Use();
+                }
             }
         }
     }

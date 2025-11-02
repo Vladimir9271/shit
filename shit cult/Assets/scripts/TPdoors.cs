@@ -9,6 +9,7 @@ public class TPdoors : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
+
             player.transform.position = TPpositionPlayer.position;
             Camera mainCam = Camera.main;
             Vector3 cameraPos = TPpositionCamera.position;
