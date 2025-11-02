@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     private SpriteRenderer sprite;
 
     public LayerMask wallsLayer;
-    [SerializeField] public GameObject[] room = new GameObject[5];
     /*private States State//функция для смены состояний
     {
         get { return (States)anim.GetInteger("State"); }
@@ -33,6 +32,7 @@ public class Player : MonoBehaviour
     {
         CheckFall();
         CheckGround();
+        rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
     }
     void Update()
     {
@@ -51,7 +51,6 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.1f, wallsLayer);
         //if (!isGrounded && !isFall) State = States.jump;
     }
-
     private void Run()//функция бега
     {
         //if (isGrounded) State = States.run;

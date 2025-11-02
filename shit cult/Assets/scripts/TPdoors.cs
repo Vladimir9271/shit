@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class TPdoors : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]public Transform TPpositionPlayer;
+    [SerializeField]public Transform TPpositionCamera;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D player)
     {
-        
+        if (player.CompareTag("Player"))
+        {
+            player.transform.position = TPpositionPlayer.position;
+            Camera mainCam = Camera.main;
+            Vector3 cameraPos = TPpositionCamera.position;
+            cameraPos.z = -5;
+            mainCam.transform.position = cameraPos;
+        }
     }
 }
