@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class crystall : Interactable
+public class monster : Interactable
 {
     public Player playerScript;
     public PlayerInventory playerInventoryScript;
@@ -21,8 +21,7 @@ public class crystall : Interactable
         Debug.Log("Действие началось");
         yield return new WaitForSeconds(2f);
         Debug.Log("Действие завершено");
-
         playerScript.isWork = false;
-        playerInventoryScript.TryTakeItem(0);
+        playerInventoryScript.TryTakeItem(1);
     }
 }
