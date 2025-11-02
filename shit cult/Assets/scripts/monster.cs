@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class crystall : Interactable
+public class monster : Interactable
 {
     public override void Use()
     {

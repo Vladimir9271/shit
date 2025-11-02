@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 272494950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e95cbedfd212cc84ea6d0958c97a63a1, type: 3}
+  m_Script: {fileID: 11500000, guid: aead796b93861614b9603ad731a9617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
@@ -4498,7 +4498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252135970}
   - component: {fileID: 1252135972}
-  - component: {fileID: 1252135971}
+  - component: {fileID: 1252135973}
   m_Layer: 10
   m_Name: monster
   m_TagString: Interactable
@@ -4522,19 +4522,6 @@ Transform:
   - {fileID: 738895613}
   m_Father: {fileID: 641301060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1252135971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252135969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e95cbedfd212cc84ea6d0958c97a63a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractable: 1
 --- !u!70 &1252135972
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4572,6 +4559,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 4, y: 3}
   m_Direction: 1
+--- !u!114 &1252135973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252135969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b5f301fab2f2e4592e5711ebee648a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
 --- !u!1 &1266160088
 GameObject:
   m_ObjectHideFlags: 0
