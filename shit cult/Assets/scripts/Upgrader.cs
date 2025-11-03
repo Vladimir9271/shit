@@ -3,22 +3,22 @@ using System.Collections;
 
 public class Upgrader : Interactable
 {
-    public Player playerScript;
+    public PlayerInventory playerScript;
     [SerializeField] public Transform TPpositionPlayer;
+    [SerializeField] public float cooldown = 10f;
     public override void Use()
     {
         GameObject playerObj = GameObject.FindWithTag("Player");
-        playerScript = playerObj.GetComponent<Player>();
-        playerScript.isWork = true;
-        playerScript.speed = 0;
-        playerObj.transform.position = TPpositionPlayer.position;
-        StartCoroutine(Working());
+        playerScript = playerObj.GetComponent<PlayerInventory>();
+        for (int i = 0; i < playerScript.heldItems.Count; i++)
+        {
+        }
+            StartCoroutine(Working());
     }
     private IEnumerator Working()
     {
         Debug.Log("Действие началось");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(cooldown);
         Debug.Log("Действие завершено");
-        playerScript.isWork = false;
     }
 }

@@ -6,6 +6,7 @@ public class crystall : Interactable
     public Player playerScript;
     public PlayerInventory playerInventoryScript;
     [SerializeField] public Transform TPpositionPlayer;
+    [SerializeField] public float cooldown = 2f;
     public override void Use()
     {
         GameObject playerObj = GameObject.FindWithTag("Player");
@@ -19,7 +20,7 @@ public class crystall : Interactable
     private IEnumerator Working()
     {
         Debug.Log("Действие началось");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(cooldown);
         Debug.Log("Действие завершено");
 
         playerScript.isWork = false;
