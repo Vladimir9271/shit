@@ -86,4 +86,8 @@ public class PlayerInventory : MonoBehaviour
         heldItems.Clear();
         currentItemIndices.Clear();
     }
+    public List<int> GetCurrentItemIndices()
+    {
+        return new List<int>(currentItemIndices);
+    }
 }
