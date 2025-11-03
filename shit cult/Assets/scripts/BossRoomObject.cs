@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class crystall : Interactable
+public class BossRoomObject : Interactable
 {
+    public bool done = false;
     public Player playerScript;
     public PlayerInventory playerInventoryScript;
     [SerializeField] public Transform TPpositionPlayer;
@@ -22,8 +23,7 @@ public class crystall : Interactable
         Debug.Log("Действие началось");
         yield return new WaitForSeconds(cooldown);
         Debug.Log("Действие завершено");
-
         playerScript.isWork = false;
-        playerInventoryScript.TryTakeItem(0);
+        done = true;
     }
 }
