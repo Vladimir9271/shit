@@ -119,12 +119,12 @@ TextureImporter:
       name: run3_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 181
-        width: 743
-        height: 791
+        x: 157
+        y: 94
+        width: 741
+        height: 877
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +137,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: run3_1
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 93
-        width: 247
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acaab8bac94af75b0800000000000000
-      internalID: -5368391238002431286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4bb55d1c87d8df443b506e877d094d63
     internalID: 0
     vertices: []
     indices: 

@@ -51,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -119,12 +119,12 @@ TextureImporter:
       name: run5_0
       rect:
         serializedVersion: 2
-        x: 102
-        y: 96
-        width: 797
-        height: 916
+        x: 103
+        y: 97
+        width: 864
+        height: 914
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +137,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: run5_1
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 312
-        width: 254
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b33be66d0c806cbd0800000000000000
-      internalID: -2610389309690301637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 534faaa8de19be64ca5bac56136168f9
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +152,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       run5_0: -1371116507410268128
-      run5_1: -2610389309690301637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

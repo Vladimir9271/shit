@@ -10,6 +10,17 @@ public class Upgrader : Interactable
 
     private bool isProcessing = false;
     private bool haveResource = false;
+
+    [SerializeField] private Animator anim;
+    private bool Work
+    {
+        get { return anim.GetBool("Work"); }
+        set { anim.SetBool("Work", value); }
+    }
+    void Update()
+    {
+        Work = isProcessing;
+    }
     public override void Use()
     {
         if (!isProcessing) {
@@ -31,7 +42,8 @@ public class Upgrader : Interactable
         }
         Debug.Log("Действие началось");
         isProcessing = true;
-       
+        Work = isProcessing;
+
 
         List<int> indices = playerScript.GetCurrentItemIndices();
         int targetIndex = -1;
@@ -57,6 +69,7 @@ public class Upgrader : Interactable
         {
             Debug.Log("❌ У игрока нет предмета с индексом");
             isProcessing = false;
+            Work = isProcessing;
             yield break;
         }
 
@@ -70,9 +83,11 @@ public class Upgrader : Interactable
         Debug.Log($"заказ с индексом {indexUpgrad} готов");
         haveResource = true;
         isProcessing = false;
+        Work = isProcessing;
         //playerScript.TryTakeItem(indexUpgrad);
 
         isProcessing = false;
+        Work = isProcessing;
         Debug.Log("Действие завершено");
     }
 }
