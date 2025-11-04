@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;//на земле?
     private bool isFall;//падает?
     public bool isWork = false;//работает?
+    public bool isDead = false;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -38,15 +39,19 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (!isWork)
+        if (!isDead)
         {
-            if (speed == 0 && isGrounded) State = States.idle;
-            Run();
-            if (isGrounded && Input.GetButtonDown("Jump"))
-                Jump();
-            Interact();
+            if (!isWork)
+            {
+                if (speed == 0 && isGrounded) State = States.idle;
+                Run();
+                if (isGrounded && Input.GetButtonDown("Jump"))
+                    Jump();
+                Interact();
+            }
+            else State = States.work;
         }
-        else State = States.work;
+        else Dead();
     }
     private void CheckFall() //проверка падения
     {
@@ -79,9 +84,9 @@ public class Player : MonoBehaviour
             speed = Mathf.MoveTowards(speed, 0, slow * Time.deltaTime);
         }
 
-        if (speed > 0 && !facingdirection)
+        if (speed > 0 && facingdirection)
             Flip();
-        else if (speed < 0 && facingdirection)
+        else if (speed < 0 && !facingdirection)
             Flip();
     }
 
@@ -114,7 +119,10 @@ public class Player : MonoBehaviour
             }
         }
     }
+    private void Dead()
+    {
 
+    }
     public enum States //состояния героя
     {
         idle,

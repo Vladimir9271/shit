@@ -7,12 +7,15 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Настройки")]
     [SerializeField] private GameObject[] itemPrefabs;  // Префабы товаров
+    [SerializeField] private GameObject handPrefab;  // Префаб руки
     [SerializeField] public Vector3 offset = new Vector3(0f, 2f, 0f); // Нижний элемент башни
+    [SerializeField] public Vector3 handoffset = new Vector3(0f, -0.1f, 0f); // Нижний элемент башни
     [SerializeField] private float followSpeed = 5f;    // Скорость следования
     [SerializeField] private float hoverAmplitude = 0.2f; // Амплитуда парения
     [SerializeField] private float hoverFrequency = 2f;   // Частота парения
     [SerializeField] public float itemHeight = 0.6f;   // Расстояние между предметами в башне
     [SerializeField] private float intervalFollowSpeed = 0.1f;/// интервал скорости следования
+    private GameObject hand;
 
     public List<GameObject> heldItems = new List<GameObject>(); // Все предметы игрока
     private List<int> currentItemIndices = new List<int>();     // Их индексы (для логики)
@@ -44,6 +47,10 @@ public class PlayerInventory : MonoBehaviour
         GameObject newItem = Instantiate(itemPrefabs[index], spawnPos, Quaternion.identity);
         heldItems.Add(newItem);
         currentItemIndices.Add(index);
+        if (heldItems.Count == 1)
+        {
+            GameObject hand = Instantiate(handPrefab, spawnPos + handoffset, Quaternion.identity);
+        }
 
         Debug.Log($"Взяли товар {index}. Сейчас в башне: {heldItems.Count}");
     }

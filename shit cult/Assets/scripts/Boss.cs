@@ -137,9 +137,13 @@ public class Boss : MonoBehaviour
                     uiText.text = $" ";
                 }
                 else Lose();
+                BedScript.done = true;
+                CabinetScript.done = true;
+                WardrodeScript.done = true;
             } else
             {
                 List<int> inventory = new List<int>();
+                List<GameObject> spawnedItems = new List<GameObject>(); // <ЦЦ —охран€ем созданные объекты
                 int randomIndex = Random.Range(3, arraysize+1);
                 for (int i = 0; i < randomIndex; i++)
                 {
@@ -148,9 +152,14 @@ public class Boss : MonoBehaviour
                     Debug.Log($"число{randomValue}");
                 }
                 uiText.text = $"хочу такую башню";
-                foreach (int n in inventory) {
-                    GameObject newItem = Instantiate(allItems[n], spawninfo.transform.position + offset * n, Quaternion.identity);
-                    }
+                int j = 0;
+                foreach (int n in inventory)
+                {
+                    Vector3 spawnPos = spawninfo.transform.position + offset * j;
+                    j++;
+                    GameObject newItem = Instantiate(allItems[n], spawnPos, Quaternion.identity);
+                    spawnedItems.Add(newItem); // сохран€ем объект
+                }
                 cool = cooldownglobal;
                 yield return new WaitForSeconds(cooldownglobal);
                 cool = 0;
@@ -164,6 +173,12 @@ public class Boss : MonoBehaviour
                     uiText.text = $" ";
                 }
                 else Lose();
+                foreach (GameObject obj in spawnedItems)
+                {
+                    if (obj != null)
+                        Destroy(obj);
+                }
+                spawnedItems.Clear();
             }
 
             

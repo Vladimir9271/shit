@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: closecabinet
+  m_Name: closewardrobe
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -8105720889227947347, guid: 4fd7b5145f10a05499b5e854cea8220f, type: 3}
+      value: {fileID: -2920921064033334868, guid: 9214046eba94c694a8dea533c00686ff, type: 3}
     - time: 1
-      value: {fileID: -8105720889227947347, guid: 4fd7b5145f10a05499b5e854cea8220f, type: 3}
+      value: {fileID: -2920921064033334868, guid: 9214046eba94c694a8dea533c00686ff, type: 3}
     attribute: m_Sprite
     path: Frame_0
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -8105720889227947347, guid: 4fd7b5145f10a05499b5e854cea8220f, type: 3}
-    - {fileID: -8105720889227947347, guid: 4fd7b5145f10a05499b5e854cea8220f, type: 3}
+    - {fileID: -2920921064033334868, guid: 9214046eba94c694a8dea533c00686ff, type: 3}
+    - {fileID: -2920921064033334868, guid: 9214046eba94c694a8dea533c00686ff, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

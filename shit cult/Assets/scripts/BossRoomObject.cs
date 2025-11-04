@@ -8,6 +8,17 @@ public class BossRoomObject : Interactable
     public PlayerInventory playerInventoryScript;
     [SerializeField] public Transform TPpositionPlayer;
     [SerializeField] public float cooldown = 2f;
+
+    [SerializeField] private Animator anim;
+    private bool Done
+    {
+        get { return anim.GetBool("Done"); }
+        set { anim.SetBool("Done", value); }
+    }
+    void Update()
+    {
+        Done = done;
+    }
     public override void Use()
     {
         if (!done)
