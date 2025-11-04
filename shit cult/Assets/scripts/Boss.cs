@@ -12,9 +12,11 @@ public class Boss : MonoBehaviour
     [SerializeField] public GameObject Bed;
     [SerializeField] public GameObject Cabinet;
     [SerializeField] public GameObject Wardrode;
+    [SerializeField] public GameObject Score;
     private BossRoomObject BedScript;
     private BossRoomObject CabinetScript;
     private BossRoomObject WardrodeScript;
+    private ScoreManagerTMP ScoreScript;
     [SerializeField] public float cooldown = 10f;
     [SerializeField] public float cooldownglobal = 30f;
     [SerializeField] public float animcooldown = 10f;
@@ -42,6 +44,7 @@ public class Boss : MonoBehaviour
     };
 
     [SerializeField] private TextMeshProUGUI uiText;
+    [SerializeField] private MonoBehaviour loseScript;
 
     void Start()
     {
@@ -186,7 +189,10 @@ public class Boss : MonoBehaviour
     }
     private void Lose()
     {
-        Debug.Log("Проиграл");
+        /*Debug.Log("Проиграл");
+        playerScript.isDead = true;
+        ScoreScript.EndGame();
+        loseScript.enabled = true;*/
     }
     private void AnimFinger()
     {

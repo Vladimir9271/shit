@@ -39,8 +39,6 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (!isDead)
-        {
             if (!isWork)
             {
                 if (speed == 0 && isGrounded) State = States.idle;
@@ -50,8 +48,6 @@ public class Player : MonoBehaviour
                 Interact();
             }
             else State = States.work;
-        }
-        else Dead();
     }
     private void CheckFall() //проверка падения
     {
@@ -118,10 +114,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-    }
-    private void Dead()
-    {
-
     }
     public enum States //состояния героя
     {

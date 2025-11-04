@@ -119,12 +119,12 @@ TextureImporter:
       name: jump9_0
       rect:
         serializedVersion: 2
-        x: 174
-        y: 237
-        width: 749
-        height: 700
+        x: 175
+        y: 92
+        width: 747
+        height: 844
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +137,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: jump9_1
-      rect:
-        serializedVersion: 2
-        x: 486
-        y: 91
-        width: 337
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 306d0354cc86034b0800000000000000
-      internalID: -5462751121456966141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 833cc972c10febc408ca4ac087f210cf
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +150,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jump9_0: -3412010395859436215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

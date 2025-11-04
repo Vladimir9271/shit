@@ -119,12 +119,12 @@ TextureImporter:
       name: run8_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 181
-        width: 743
-        height: 791
+        x: 157
+        y: 94
+        width: 741
+        height: 877
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +137,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: run8_1
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 93
-        width: 247
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec88c46ae197c98b0800000000000000
-      internalID: -5144103501817935666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c32bf4bf5a1d144ebcd9edbc7976824
     internalID: 0
     vertices: []
     indices: 
